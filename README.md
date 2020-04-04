@@ -30,6 +30,14 @@ go test
 
 # Configuration
 
+Variables:
+```
+HTTP_PORT - listening HTTP port (default: 8000)
+CONFIG_RELOAD_INTERVAL - configuration reload interval (default: 60)
+CONFIG_DIR  - location of configuration directories
+```
+
+Configuration directory:
 ```
 config/
 └── test1
