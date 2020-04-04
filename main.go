@@ -1,14 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
-		fmt.Fprint(w, "Test")
-	},
-	)
-	http.ListenAndServe(":8000", nil)
+	log.Print("Starting the service")
+	router := Router()
+	log.Print("The service is ready to listen and serve.")
+	log.Fatal(http.ListenAndServe(":8000", router))
 }
