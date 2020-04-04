@@ -47,4 +47,8 @@ config/
 
 ```
 
-#
+# Deployment
+
+Build/re-use docker images
+
+https://hub.docker.com/repository/docker/denis256/simple-tds
