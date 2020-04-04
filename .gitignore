@@ -25,3 +25,6 @@ main
 src
 src/*
 simple-tds
+
+bin/*
+bin
