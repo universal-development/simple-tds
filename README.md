@@ -51,4 +51,4 @@ config/
 
 Build/re-use docker images
 
-https://hub.docker.com/repository/docker/denis256/simple-tds
+https://hub.docker.com/r/denis256/simple-tds
