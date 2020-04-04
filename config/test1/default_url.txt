@@ -1,2 +1,2 @@
-http://valid-domain.txt
-http://valid-domain2.txt
+http://default-domain.txt
+http://default-domain.txt

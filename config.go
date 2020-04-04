@@ -5,8 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"os"
+	"regexp"
 	"strings"
+	"time"
 )
 
 const AGENT_NAME = "_agent.txt"
@@ -93,6 +96,34 @@ func loadConfig() {
 
 func resolve(name string, agent string) string {
 
-	log.Print("No urls found for " + name + " / " + agent)
-	return ""
+	config, ok := redirectConfig[name]
+	if !ok {
+		log.Print("No config for name " + name)
+		return ""
+	}
+
+	var matchedKey = DEFAULT_URL_FILE
+
+	for key, patterns := range config.userAgentPatterns {
+		for _, pattern := range patterns {
+			match, _ := regexp.MatchString(pattern, agent)
+			if match {
+				matchedKey = key + URL_NAME
+				break
+			}
+		}
+		if matchedKey != DEFAULT_URL_FILE {
+			break
+		}
+	}
+	log.Print("Matched group for " + name + " / " + agent + " = " + matchedKey)
+	var urls, foundPattern = config.urls[matchedKey]
+	if !foundPattern || len(urls) == 0 {
+		return ""
+	}
+
+	rand.Seed(time.Now().Unix())
+	var url = urls[rand.Intn(len(urls))]
+
+	return url
 }

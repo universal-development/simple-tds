@@ -20,6 +20,12 @@ Access:
 curl -v http://localhost:8000/
 curl -v http://localhost:8000/home
 curl -v http://localhost:8000/go/test1
+curl  -A "Potato" -v http://localhost:8000/go/test1
+```
+
+Redirect logic test:
+```
+go test config_test.go
 ```
 
 # Configuration

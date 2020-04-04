@@ -1,0 +1,3 @@
+http://curl1
+http://curl2
+http://curl3
