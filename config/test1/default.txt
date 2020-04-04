@@ -1,2 +1,0 @@
-http://valid-domain.txt
-http://valid-domain2.txt
