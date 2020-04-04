@@ -1,0 +1,3 @@
+http://bot-domain1.com
+http://bot-domain2.com
+http://bot-domain3.com
