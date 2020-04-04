@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
-func home(w http.ResponseWriter, _ *http.Request) {
-	fmt.Fprint(w, "Home handler")
+func home(w http.ResponseWriter, r *http.Request) {
+	agent := r.UserAgent()
+	fmt.Fprint(w, fmt.Sprintf("Home handler, user agent: %s", agent))
 }

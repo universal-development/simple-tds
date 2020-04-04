@@ -7,17 +7,18 @@ Service for routing HTTP requests based on different patterns
 
 Building:
 ```
-go build main.go
+go build
 ```
 
 Run:
 ```
-./main
+./simple-tds
 ```
 
 Access:
 ```
 curl -v http://localhost:8000/
+curl -v http://localhost:8000/home
 ```
 
 
