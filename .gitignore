@@ -24,3 +24,4 @@ hs_err_pid*
 main
 src
 src/*
+simple-tds
