@@ -25,7 +25,7 @@ curl  -A "Potato" -v http://localhost:8000/go/test1
 
 Redirect logic test:
 ```
-go test config_test.go
+go test
 ```
 
 # Configuration

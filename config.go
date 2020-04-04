@@ -108,7 +108,7 @@ func resolve(name string, agent string) string {
 		for _, pattern := range patterns {
 			match, _ := regexp.MatchString(pattern, agent)
 			if match {
-				matchedKey = key + URL_NAME
+				matchedKey = key
 				break
 			}
 		}
@@ -118,6 +118,7 @@ func resolve(name string, agent string) string {
 	}
 	log.Print("Matched group for " + name + " / " + agent + " = " + matchedKey)
 	var urls, foundPattern = config.urls[matchedKey]
+
 	if !foundPattern || len(urls) == 0 {
 		return ""
 	}
