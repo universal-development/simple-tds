@@ -21,5 +21,15 @@ curl -v http://localhost:8000/
 curl -v http://localhost:8000/home
 ```
 
+# Configuration
+
+```
+config/
+└── test1
+    ├── bot_agent.txt   - patterns to match bot user agents
+    ├── bot_url.txt     - list of urls where to forward requests matched by (bot_agent.txt)
+    └── default_url.txt - list of urls where to forward not matched requests
+
+```
 
 #
