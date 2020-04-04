@@ -13,9 +13,11 @@ go build main.go
 Run:
 ```
 ./main
+```
 
+Access:
+```
 curl -v http://localhost:8000/
-
 ```
 
 
