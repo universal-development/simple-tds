@@ -1,2 +1,2 @@
-http://default-domain.txt
-http://default-domain2.txt
+http://default-domain.com
+http://default-domain2.com

@@ -14,5 +14,18 @@ func redirect(w http.ResponseWriter, r *http.Request) {
 	redirectID := vars["redirectId"]
 	url := resolve(redirectID, agent)
 
-	fmt.Fprint(w, fmt.Sprintf("Redirect id : %s agent : %s redirect url: %s", redirectID, agent, url))
+	fmt.Fprint(w, fmt.Sprintf(`<!DOCTYPE html>
+		<html>
+		<head>
+		   <meta http-equiv="refresh" content="0; URL='%s'" />
+		   <script type="text/javascript">
+		            window.location.href = "%s"
+		        </script>
+		</head>
+		<body>
+
+		</body>
+		</html>
+
+		`, url, url))
 }
