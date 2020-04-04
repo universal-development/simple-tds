@@ -19,6 +19,7 @@ Access:
 ```
 curl -v http://localhost:8000/
 curl -v http://localhost:8000/home
+curl -v http://localhost:8000/go/test1
 ```
 
 # Configuration

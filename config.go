@@ -90,3 +90,9 @@ func loadConfig() {
 
 	redirectConfig = newRedirectConfig
 }
+
+func resolve(name string, agent string) string {
+
+	log.Print("No urls found for " + name + " / " + agent)
+	return ""
+}
