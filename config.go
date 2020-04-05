@@ -102,11 +102,12 @@ func resolve(name string, agent string) string {
 		return ""
 	}
 
+	agent = strings.ToLower(agent)
 	var matchedKey = DEFAULT_URL_FILE
 
 	for key, patterns := range config.userAgentPatterns {
 		for _, pattern := range patterns {
-			match, _ := regexp.MatchString(pattern, agent)
+			match, _ := regexp.MatchString(strings.ToLower(pattern), agent)
 			if match {
 				matchedKey = key
 				break

@@ -3,7 +3,7 @@
 set -x
 
 export REGISTRY=${REGISTRY:-denis256/simple-tds}
-export TAG=${TAG:-0.0.1}
+export TAG=${TAG:-0.0.2}
 
 chmod +x ./simple-tds
 
